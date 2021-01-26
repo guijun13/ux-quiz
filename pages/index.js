@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import db from '../db.json';
+import React from 'react';
+import styled from 'styled-components';
 import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
@@ -26,7 +26,7 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
 
-          <p>Responda as perguntas e verifique seu conhecimento de UX Design!</p>
+            <p>Responda as perguntas e verifique seu conhecimento de UX Design!</p>
 
           </Widget.Content>
         </Widget>
@@ -36,7 +36,7 @@ export default function Home() {
           </Widget.Header>
           <Widget.Content>
 
-          <p>Veja aqui os outros quizzes da galera</p>
+            <p>Veja aqui os outros quizzes da galera</p>
 
           </Widget.Content>
         </Widget>
@@ -44,5 +44,5 @@ export default function Home() {
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/guijun13" />
     </QuizBackground>
-  )
+  );
 }
