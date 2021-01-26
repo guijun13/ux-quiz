@@ -18,25 +18,25 @@ const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground>
       <QuizContainer>
         <Widget>
           <Widget.Header>
-            <h1>Titulo</h1>
+            <h1>Quiz de UX</h1>
           </Widget.Header>
           <Widget.Content>
 
-          <p>texto</p>
+          <p>Responda as perguntas e verifique seu conhecimento de UX Design!</p>
 
           </Widget.Content>
         </Widget>
         <Widget>
           <Widget.Header>
-            <h1>Titulo 1</h1>
+            <h1>Outros quizzes da galera</h1>
           </Widget.Header>
           <Widget.Content>
 
-          <p>texto 1</p>
+          <p>Veja aqui os outros quizzes da galera</p>
 
           </Widget.Content>
         </Widget>
