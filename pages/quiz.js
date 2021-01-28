@@ -27,11 +27,13 @@ function ResultWidget({ results }) {
           }, 0)} */}
           {results.filter((resultAtual) => resultAtual).length}
           {' '}
-          perguntas
+          perguntas de
+          {' '}
+          {results.length}
         </p>
         <ul>
           {results.map((result, index) => (
-            <li>
+            <li key={`result__${result}`}>
               #
               {index + 1}
               {' '}
@@ -60,7 +62,7 @@ function LoadingScreen() {
 }
 
 function QuestionWidget({
-  question, totalQuestions, questionIndex, onSubmit,
+  question, totalQuestions, questionIndex, onSubmit, addResult,
 }) {
   const [selectedAlternative, setSelectedAlternative] = useState(undefined);
   const [isQuestionSubmitted, setIsQuestionSubmitted] = useState(false);
@@ -94,6 +96,7 @@ function QuestionWidget({
             eventInfos.preventDefault();
             setIsQuestionSubmitted(true);
             setTimeout(() => {
+              addResult(isCorrect);
               onSubmit();
               setIsQuestionSubmitted(false);
               setSelectedAlternative(undefined);
@@ -136,22 +139,28 @@ function QuestionWidget({
 
 const screenStates = {
   QUIZ: 'QUIZ',
-  LOADING: 'LAODING',
+  LOADING: 'LOADING',
   RESULT: 'RESULT',
 };
 
 export default function QuizPage() {
-  const [screenState, setScreenState] = useState(screenStates.RESULT);
+  const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [results, setResults] = useState([true, false, true]);
-
+  const [results, setResults] = useState([]);
   const questionIndex = currentQuestion;
   const totalQuestions = db.questions.length;
   const question = db.questions[questionIndex];
 
+  function addResult(result) {
+    setResults([
+      ...results,
+      result,
+    ]);
+  }
+
   useEffect(() => {
     setTimeout(() => {
-      // setScreenState(screenStates.QUIZ);
+      setScreenState(screenStates.QUIZ);
     }, 1 * 1000);
   }, []);
 
@@ -175,6 +184,7 @@ export default function QuizPage() {
            totalQuestions={totalQuestions}
            questionIndex={questionIndex}
            onSubmit={handleSubmitQuiz}
+           addResult={addResult}
          />
          )}
 
