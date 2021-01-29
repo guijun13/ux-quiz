@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
+import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
@@ -53,6 +54,23 @@ export default function Home() {
           <Widget.Content>
 
             <p>Veja aqui os outros quizzes da galera</p>
+
+            <ul>
+              {db.external.map((externalLink) => {
+                const [projectName, githubUsername] = externalLink
+                  .replace(/\//g, '') // replace all backslashes to blank
+                  .replace('https:', '') // replace 'https' to blank
+                  .replace('.vercel.app', '') // replace '.vercel.app' to blank
+                  .split('.'); // split the finished sentence based on the dot
+                return (
+                  <li key={externalLink}>
+                    <Widget.Topic href={externalLink}>
+                      {`${githubUsername}/${projectName}`}
+                    </Widget.Topic>
+                  </li>
+                );
+              })}
+            </ul>
 
           </Widget.Content>
         </Widget>
