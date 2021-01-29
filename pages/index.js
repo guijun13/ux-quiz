@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
 import Widget from '../src/components/Widget';
@@ -9,6 +8,7 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
+import QuizLogo from '../src/components/QuizLogo';
 
 export default function Home() {
   const router = useRouter();
@@ -17,6 +17,7 @@ export default function Home() {
   return (
     <QuizBackground>
       <QuizContainer>
+        <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>Quiz de UX</h1>
