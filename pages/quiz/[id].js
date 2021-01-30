@@ -1,33 +1,40 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 
 import QuizScreen from '../../src/screens/Quiz';
 
-// eslint-disable-next-line react/prop-types
 export default function ExternalQuizPage({ externalDb }) {
   return (
-    // eslint-disable-next-line react/prop-types
-    <QuizScreen externalQuestions={externalDb.questions} />
+    <ThemeProvider theme={externalDb.theme}>
+      <QuizScreen externalQuestions={externalDb.questions} />
+    </ThemeProvider>
   );
 }
 
 export async function getServerSideProps(context) {
-  const externalDb = await fetch('https://aluraquiz-base.alura-challenges.vercel.app/api/db')
-    .then((serverResponse) => {
-      if (serverResponse.ok) {
-        return serverResponse.json();
-      }
-      throw new Error('Falha em pegar os dados');
-    })
-    .then((serverResponseObject) => serverResponseObject)
-    .catch((err) => {
-      console.error(err);
-    });
+  const [projectName, githubUsername] = context.query.id.split('___');
+  try {
+    const externalDb = await fetch(`https://${projectName}.${githubUsername}.vercel.app/api/db`)
+      .then((serverResponse) => {
+        if (serverResponse.ok) {
+          return serverResponse.json();
+        }
+        throw new Error('Falha em pegar os dados');
+      })
+      .then((serverResponseObject) => serverResponseObject)
+      .catch((err) => {
+        console.error(err);
+      });
 
-  console.log(context.query);
+    console.log(context.query);
 
-  return {
-    props: {
-      externalDb,
-    },
-  };
+    return {
+      props: {
+        externalDb,
+      },
+    };
+  } catch (err) {
+    throw new Error(err);
+  }
 }

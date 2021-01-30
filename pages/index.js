@@ -64,7 +64,7 @@ export default function Home() {
                   .split('.'); // split the finished sentence based on the dot
                 return (
                   <li key={externalLink}>
-                    <Widget.Topic href={externalLink}>
+                    <Widget.Topic href={`/quiz/${projectName}___${githubUsername}`}>
                       {`${githubUsername}/${projectName}`}
                     </Widget.Topic>
                   </li>
