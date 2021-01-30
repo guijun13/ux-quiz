@@ -10,6 +10,7 @@ import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import QuizLogo from '../src/components/QuizLogo';
+import Link from '../src/components/Link';
 
 export default function Home() {
   const router = useRouter();
@@ -64,7 +65,10 @@ export default function Home() {
                   .split('.'); // split the finished sentence based on the dot
                 return (
                   <li key={externalLink}>
-                    <Widget.Topic href={`/quiz/${projectName}___${githubUsername}`}>
+                    <Widget.Topic
+                      as={Link}
+                      href={`/quiz/${projectName}___${githubUsername}`}
+                    >
                       {`${githubUsername}/${projectName}`}
                     </Widget.Topic>
                   </li>
