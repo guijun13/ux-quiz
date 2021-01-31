@@ -1,28 +1,53 @@
 {
   "bg": "https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
-  "title": "Quiz CSS da Alura",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "title": "Quiz de UX",
+  "description": "Responda as perguntas e verifique seu conhecimento de UX Design!",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
+      "image": "https://media.giphy.com/media/YSqfSiVCSrF5vpXR8J/giphy.gif",
+      "title": "No UX design, para quem é o foco no desenvolvimento do produto?",
       "description": "Essa é pra aquecer",
       "answer": 2,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Cliente",
+        "Dev",
+        "Usuário",
+        "Stakeholder"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://miro.medium.com/max/294/1*KCpCPsPXDcNhriIaFtyk5g.png",
+      "title": "Existem 10 heurísticas criadas por Jakob Nielsen que definem 'regras' para interfaces. A imagem acima é um exemplo de uma delas. Qual é ela?",
+      "description": "Hummmmm",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "Prevenções de erros",
+         "Reconhecimento em vez de memorização",
+         "Estética e design minimalista",
+         "Ajuda e documentação"
+      ]
+    },
+    {
+      "image": "https://img.uxcel.com/practices/conflicting-1584625549912/a-1588765592784.jpg",
+      "title": "Podemos categorizar ícones em alguns tipos. Na imagem acima, os ícones são de qual tipo?",
+      "description": "Um pouco de UI agora",
+      "answer": 2,
+      "alternatives": [
+         "Ícones universais",
+         "Ícones únicos",
+         "Ícones conflitantes"
+      ]
+    },
+    {
+      "image": "https://careerfoundry.com/en/blog/uploads/prototyping.png",
+      "title": "Existe, em geral, 2 tipos de protótipos: Baixa e alta fidelidade. Qual característica faz parte do protótipo de BAIXA fidelidade?",
+      "description": "UX agora irra",
+      "answer": 0,
+      "alternatives": [
+         "Foco na funcionalidade",
+         "Desvantagem em maior custo de executação",
+         "Insights detalhados",
+         "Alta semelhança com o produto final"
       ]
     }
   ],
