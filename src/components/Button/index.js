@@ -7,7 +7,7 @@ const Button = styled.button`
   border-radius: ${({ theme }) => theme.borderRadius};
   border: 0;
   width: 100%;
-  padding: 10px 16px;
+  padding: 15px 16px;
   font-weight: bold;
   font-size: 14px;
   line-height: 1;

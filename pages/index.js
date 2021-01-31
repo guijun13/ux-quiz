@@ -86,6 +86,8 @@ export default function Home() {
                   <li key={externalLink}>
                     <Widget.Topic
                       as={Link}
+                      target="_blank"
+                      rel="noreferrer"
                       href={`/quiz/${projectName}___${githubUsername}`}
                     >
                       {`${githubUsername}/${projectName}`}

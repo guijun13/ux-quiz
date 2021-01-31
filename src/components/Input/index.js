@@ -6,9 +6,8 @@ const InputBase = styled.input`
   width: 100%;
   padding: 15px;
   font-size: 16px;
-  border: 1px solid ${({ theme }) => theme.colors.primary};
+  border: 2px solid ${({ theme }) => theme.colors.primary};
   color: ${({ theme }) => theme.colors.contrastText};
-  /* background-color: ${({ theme }) => theme.colors.mainBg}; */
   border-radius: 10px ${({ theme }) => theme.colors.borderRadius};
   outline: 0;
   margin-bottom: 25px;

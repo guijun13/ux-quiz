@@ -7,12 +7,14 @@ import QuizBackground from '../../src/components/QuizBackground';
 import QuizContainer from '../../src/components/QuizContainer';
 import Button from '../../src/components/Button';
 import AlternativesForm from '../../src/components/AlternativesForm';
+import HomeLink from '../../src/components/HomeLink';
 
 function ResultWidget({ results }) {
   return (
     <Widget>
       <Widget.Header>
-        Resultados:
+        <HomeLink href="/" />
+        <h1>Resultados:</h1>
       </Widget.Header>
 
       <Widget.Content>
@@ -74,6 +76,7 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
+        <HomeLink href="/" />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
