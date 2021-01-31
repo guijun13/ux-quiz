@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 
+import { Player } from '@lottiefiles/react-lottie-player';
+
 import db from '../../db.json';
+import spinner from '../../spinner.json';
+
 import Widget from '../../src/components/Widget';
 import QuizBackground from '../../src/components/QuizBackground';
 import QuizContainer from '../../src/components/QuizContainer';
@@ -58,7 +62,12 @@ function LoadingScreen() {
       </Widget.Header>
 
       <Widget.Content>
-        [Desafio do loading]
+        <Player
+          autoplay
+          loop
+          src={spinner}
+          style={{ height: '100px', width: '100px' }}
+        />
       </Widget.Content>
     </Widget>
   );
@@ -86,7 +95,7 @@ function QuestionWidget({
         alt="Descrição"
         style={{
           width: '100%',
-          height: '150px',
+          height: '250px',
           objectFit: 'cover',
         }}
       />
@@ -169,7 +178,7 @@ export default function QuizPage() {
   useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 1000);
+    }, 2 * 1000);
   }, []);
 
   function handleSubmitQuiz() {
