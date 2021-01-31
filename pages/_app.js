@@ -37,6 +37,24 @@ export default function App({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet" />
         <title>UX Quiz</title>
+        {/* <!-- Primary Meta Tags --> */}
+        <title>Quiz de UX</title>
+        <meta name="title" content="Quiz de UX" />
+        <meta name="description" content="Responda as perguntas e verifique seu conhecimento de UX Design!" />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ux-quiz.guijun13.vercel.app/" />
+        <meta property="og:title" content="Quiz de UX" />
+        <meta property="og:description" content="Responda as perguntas e verifique seu conhecimento de UX Design!" />
+        <meta property="og:image" content="../src/assets/print.png" />
+
+        {/* <!-- Twitter -- /> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://ux-quiz.guijun13.vercel.app/" />
+        <meta property="twitter:title" content="Quiz de UX" />
+        <meta property="twitter:description" content="Responda as perguntas e verifique seu conhecimento de UX Design!" />
+        <meta property="twitter:image" content="../src/assets/print.png" />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
