@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     /* New styles */
     display: flex;
     flex-direction: column;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     // Deixa branco no começo
     color: ${({ theme }) => theme.colors.contrastText};
   }
@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet" />
         <title>UX Quiz</title>
         {/* <!-- Primary Meta Tags --> */}
         <title>Quiz de UX</title>
@@ -49,12 +49,6 @@ export default function App({ Component, pageProps }) {
         <meta property="og:description" content="Responda as perguntas e verifique seu conhecimento de UX Design!" />
         <meta property="og:image" content="../src/assets/print.png" />
 
-        {/* <!-- Twitter -- /> */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://ux-quiz.guijun13.vercel.app/" />
-        <meta property="twitter:title" content="Quiz de UX" />
-        <meta property="twitter:description" content="Responda as perguntas e verifique seu conhecimento de UX Design!" />
-        <meta property="twitter:image" content="../src/assets/print.png" />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />

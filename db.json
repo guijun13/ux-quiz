@@ -5,7 +5,7 @@
   "questions": [
     {
       "image": "https://media.giphy.com/media/YSqfSiVCSrF5vpXR8J/giphy.gif",
-      "title": "No UX design, para quem é o foco no desenvolvimento do produto?",
+      "title": "No UX design, quem é o foco no desenvolvimento do produto?",
       "description": "Essa é pra aquecer",
       "answer": 2,
       "alternatives": [
@@ -16,9 +16,20 @@
       ]
     },
     {
+      "image": "https://img.uxcel.com/practices/conflicting-1584625549912/a-1588765592784.jpg",
+      "title": "Podemos nomear e agrupar ícones por seus tipos. Os ícones acima, são de qual tipo?",
+      "description": "Um pouco de princípios de design",
+      "answer": 1,
+      "alternatives": [
+         "Ícones universais",
+         "Ícones conflitantes",
+         "Ícones únicos"
+      ]
+    },
+    {
       "image": "https://miro.medium.com/max/294/1*KCpCPsPXDcNhriIaFtyk5g.png",
-      "title": "Existem 10 heurísticas criadas por Jakob Nielsen que definem 'regras' para interfaces. A imagem acima é um exemplo de uma delas. Qual é ela?",
-      "description": "Hummmmm",
+      "title": "Existem 10 heurísticas criadas por Jakob Nielsen que definem 'regras' para design de interfaces. A imagem acima é um exemplo de uma delas. Qual é ela?",
+      "description": "Conceitos de UX design",
       "answer": 0,
       "alternatives": [
          "Prevenções de erros",
@@ -28,26 +39,15 @@
       ]
     },
     {
-      "image": "https://img.uxcel.com/practices/conflicting-1584625549912/a-1588765592784.jpg",
-      "title": "Podemos categorizar ícones em alguns tipos. Na imagem acima, os ícones são de qual tipo?",
-      "description": "Um pouco de UI agora",
-      "answer": 2,
-      "alternatives": [
-         "Ícones universais",
-         "Ícones únicos",
-         "Ícones conflitantes"
-      ]
-    },
-    {
       "image": "https://careerfoundry.com/en/blog/uploads/prototyping.png",
-      "title": "Existe, em geral, 2 tipos de protótipos: Baixa e alta fidelidade. Qual característica faz parte do protótipo de BAIXA fidelidade?",
-      "description": "UX agora irra",
-      "answer": 0,
+      "title": "Existe, em geral, 2 tipos de protótipos: de baixa e de alta fidelidade. Qual característica faz parte do protótipo de BAIXA fidelidade?",
+      "description": "UX na prática",
+      "answer": 3,
       "alternatives": [
-         "Foco na funcionalidade",
-         "Desvantagem em maior custo de executação",
+         "Alta semelhança com o produto final",
+         "Maior custo de execução",
          "Insights detalhados",
-         "Alta semelhança com o produto final"
+         "Foco na funcionalidade"
       ]
     }
   ],

@@ -7,8 +7,20 @@ const Widget = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
   border-radius: 4px;
   overflow: hidden;
-  h1, h2, h3 {
+  h1 {
     font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+  h3 {
+    font-size: 18px;
     font-weight: 700;
     line-height: 1;
     margin-bottom: 0;
@@ -16,7 +28,7 @@ const Widget = styled.div`
   p {
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.2;
   }
 `;
 

@@ -32,11 +32,11 @@ export default function Home() {
           animate="show"
         >
           <Widget.Header>
-            <h1>Quiz de UX</h1>
+            <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
 
-            <p>Responda as perguntas e verifique seu conhecimento de UX Design!</p>
+            <p>{db.description}</p>
 
             <form onSubmit={(event) => {
               event.preventDefault();
